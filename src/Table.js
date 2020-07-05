@@ -3,7 +3,9 @@ import axios from 'axios';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import {Modal,Button} from 'react-bootstrap';
+
 function Table() {
+    
     const [place,setPlace]=useState([]);
     const [modalinfo,setModalinfo]=useState([]);
     const[showmodal,setShowmodal]=useState(false);
@@ -36,12 +38,15 @@ function Table() {
 ]
 
 const rowEvents={
+   
     onClick:(e,row)=>{
-        console.log(row)
-        setModalinfo(row)
-        toggleTrueFalse()
-    }
-}
+     console.log(row)
+     setModalinfo(row) 
+     toggleTrueFalse()
+ }
+ 
+ }
+ 
     const toggleTrueFalse=()=>{
         setShowmodal(handleShow)
     }
@@ -49,15 +54,15 @@ const rowEvents={
         return(
         <Modal show={show} onHide={handleclose}>
             <Modal.Header closeButton>
-    <Modal.Title>{modalinfo.name}</Modal.Title>
+    <Modal.Title >{modalinfo.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
             <h4>About place</h4>
             <ul>
-        <ol>Name:{modalinfo.name}</ol>
-        <ol>Description:{modalinfo.official_description}</ol>
-        <ol>location:{modalinfo.location}</ol>
-        <ol>pincode:{modalinfo.pincode}</ol>
+        <ol ><h6 >Name:</h6>{modalinfo.name}</ol>
+        <ol><h6 >Description:</h6>{modalinfo.official_description}</ol>
+        <ol><h6>location:</h6>{modalinfo.location}</ol>
+        <ol><h6>pincode:</h6>{modalinfo.pincode}</ol>
             </ul>
             </Modal.Body>
             <Modal.Footer>
@@ -72,7 +77,8 @@ const rowEvents={
           data={place}
           columns={columns}
           pagination={paginationFactory()}
-          rowEvents={rowEvents}
+         rowEvents={rowEvents}
+        
           /> 
 
          {show ? <ModalContent/>:null}  

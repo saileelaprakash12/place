@@ -29,7 +29,9 @@ class Favourt extends React.Component {
     }
     
   }
- 
+  cancelCourse(){
+  document.getElementById('name').value="" 
+  }
   render() {
     
     return template.call(this);

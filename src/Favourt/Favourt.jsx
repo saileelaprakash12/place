@@ -8,7 +8,7 @@ function template() {
       <p>
         <input ref="name" id="name"/>
         <input type="button" value="place" onClick={this.fnPlace.bind(this)}/>
-  
+        <input type="button" name="cancelCourse" value="cancel" onClick={this.cancelCourse}/> 
                 
       </p>
   <h6> {this.props.n} </h6>
