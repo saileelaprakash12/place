@@ -1,15 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Table from './Table'
-import Favourt from './Favourt'
+import Tbbl from './components/tbbl'
+import Favrt from './components/Favrt';
 
+//import Toplace from './components/Toplace';
 function App() {
   return (
     <div className="App">
-      <Table/>
-     <Favourt/> 
-     
+     <Tbbl/>
+    <Favrt/>
     </div>
   );
 }

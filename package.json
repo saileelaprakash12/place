@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://roadtrippers.herokuapp.com/api/v1/",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -15,7 +16,10 @@
     "react-bootstrap-table2-paginator": "^2.1.2",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-table": "^6.8.2",
+    "react-table-v6": "^6.8.6",
     "redux": "^4.0.5",
     "redux-form": "^8.3.6"
   },
